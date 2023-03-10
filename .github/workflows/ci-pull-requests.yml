@@ -67,6 +67,9 @@ jobs:
       - name: Test
         run: pnpm test
 
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+
   lint:
     name: Lint changes
     runs-on: ubuntu-latest

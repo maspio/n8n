@@ -1,2 +1,8 @@
 /** @type {import('jest').Config} */
-module.exports = require('../../jest.config');
+const config = require('../../jest.config');
+
+config.collectCoverage = true;
+config.collectCoverageFrom = ['./credentials/**/*.ts', './nodes/**/*.ts', './utils/**/*.ts'];
+config.coverageReporters = ['text', 'cobertura'];
+
+module.exports = config;
